@@ -1,7 +1,7 @@
 pipeline {
   agent any 
   tools {
-    jdk 'java07'
+    jdk 'java08'
   }
 
   stages {
