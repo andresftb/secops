@@ -15,7 +15,7 @@ pipeline {
                 remote.user = userName
                 remote.identityFile = identity
                 stage("Enforce Compliance with Ansible") {
-                  //sshCommand remote: remote, sudo: true, command: 'cd /root/secops/ansible && git pull origin'
+                  sshCommand remote: remote, sudo: true, command: 'cd /root/secops/ansible && git pull origin'
                   sshCommand remote: remote, sudo: true, command: 'cd /root/secops/ansible && ansible-playbook compliance.yaml'
               }
                 stage("Scan with InSpec") {
