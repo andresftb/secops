@@ -1,5 +1,8 @@
 pipeline {
   agent any 
+  tools {
+    jdk 'java07'
+  }
 
   stages {
     stage('Daily Compliance Run') {
